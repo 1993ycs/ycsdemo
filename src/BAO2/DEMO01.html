@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--使用js前需要引用,自己的js需要在jq之后-->
+
+    <script type="text/javascript" src="jquery-1.11.1.js">
+
+    </script>
+    <script type="text/javascript">
+        function big() {
+            var ps = document.getElementsByTagName("p");
+           // alert(ps.length)
+            for(var i=0;i<ps.length;i++){
+                var p = ps[i];
+                var  font_size = p.style.fontSize;
+                var  size = parseInt(font_size.replace());
+                p.style.fontSize=(size+1)+"px";
+            }
+        }
+        function small() {
+            var ps = document.getElementsByTagName("p");
+            // alert(ps.length)
+            for(var i=0;i<ps.length;i++){
+                var p = ps[i];
+                var  font_size = p.style.fontSize;
+                var  size = parseInt(font_size.replace());
+                p.style.fontSize=(size-1)+"px";
+            }
+        }
+        function big2() {
+            //$("p")元素选择器
+            //var font_size =$("p");
+            var font_size = $("p").css("font-size");
+            var size = parseInt(font_size.replace("px",""));
+            $("p").css("font-size",(size+1)+"px");
+        }
+        function small2() {
+            var font_size = $("p").css("font-size");
+            var size = parseInt(font_size.replace("px",""));
+            $("p").css("font-size",(size-1)+"px");
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="big2();">+</button>
+    <button onclick="small2();">-</button>
+    <h1>jq的使用步骤</h1>
+    <p style="font-size: 14px">1.引用jQuery</p>
+    <p style="font-size: 14px">2.使用jQuery选择器定位结点</p>
+    <p style="font-size: 14px">3.引用jQuery方法操作结点</p>
+
+
+
+</body>
+</html>

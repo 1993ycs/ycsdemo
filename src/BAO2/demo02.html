@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iquery对象</title>
+    <script type="text/javascript" src ="jquery-1.11.1.js">
+
+    </script>
+    <script type="text/javascript">
+        function  f1() {
+            var ps = $("p");
+            //alert(ps.length);
+            for(var i=0;i<ps.length;i++){
+                var p = ps.get(i);
+                alert(p.innerText);
+            }
+        }
+    </script>
+</head>
+<body>
+        <h1>jquery对象</h1>
+        <p>1.jQuery统一封装的对象</p>
+        <p>2.选择器选择的结果是jQuery对象</p>
+        <p>3.jQuery对象本质上是一个DOM数组</p>
+        <div>
+            <button onclick="f1();">按钮一</button>
+        </div>
+</body>
+</html>

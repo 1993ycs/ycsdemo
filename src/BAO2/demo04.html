@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery动画</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        #msg {
+            border:1px solid #ccc;
+            width:100px;
+            padding:10px;
+            text-align:center;
+            background-color:#ddd;
+            display:none;
+        }
+        img {
+            position:relative;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+
+        function show() {
+            $("img").show();
+        }
+        function hide() {
+            $("img").hide();
+        }
+        function hint() {
+            $("div").fadeIn(2000).fadeOut(1000);
+        }
+        function diy() {
+            $("img").animate({'left':'500px'},2000).animate({'top':'300px'},2000).fadeOut(2000);
+        }
+    </script>
+</head>
+<body>
+<p>
+    <input type="button" value="显示" onclick="show();"/>
+    <input type="button" value="隐藏" onclick="hide();"/>
+    <input type="button" value="提示" onclick="hint();"/>
+    <input type="button" value="自定义" onclick="diy();"/>
+</p>
+<p>
+    <img src="222.jpg"/>
+</p>
+<div id="msg">操作成功</div>
+</body>
+<html>
